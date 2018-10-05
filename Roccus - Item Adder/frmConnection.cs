@@ -15,7 +15,6 @@ namespace Roccus___Item_Adder
     {
 
         private DBInstance con;
-        public int enabled { get; set; }
 
         public frmConnection()
         {
@@ -29,10 +28,6 @@ namespace Roccus___Item_Adder
             usernameTxt.Text = ConfigurationManager.AppSettings["Username"];
             passwordTxt.PasswordChar = '*';
             passwordTxt.Text = ConfigurationManager.AppSettings["Password"];
-            if(enabled == 1)
-            {
-                databaseTxt.Enabled = true;
-            }
             this.Activate();
             this.Select();
             ConnectionBtn.Focus();
@@ -59,30 +54,15 @@ namespace Roccus___Item_Adder
 
         private async void Connection()
         {
-            if (enabled == 1)
-            {
-                await Task.Delay(2000);
-                this.Hide();
-                frmProceduralSmith frm = new frmProceduralSmith();
-                frm.server = serverTxt.Text;
-                frm.database = databaseTxt.Text;
-                frm.username = usernameTxt.Text;
-                frm.password = passwordTxt.Text;
-                frm.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                await Task.Delay(2000);
-                this.Hide();
-                frmItemAdder frm = new frmItemAdder();
-                frm.server = serverTxt.Text;
-                frm.database = databaseTxt.Text;
-                frm.username = usernameTxt.Text;
-                frm.password = passwordTxt.Text;
-                frm.ShowDialog();
-                this.Close();
-            }
+            await Task.Delay(2000);
+            this.Hide();
+            frmItemAdder frm = new frmItemAdder();
+            frm.server = serverTxt.Text;
+            frm.database = databaseTxt.Text;
+            frm.username = usernameTxt.Text;
+            frm.password = passwordTxt.Text;
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }
