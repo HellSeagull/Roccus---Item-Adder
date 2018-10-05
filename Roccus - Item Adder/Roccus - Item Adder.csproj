@@ -75,6 +75,18 @@
     <Compile Include="Definitions\LEGION\modelfiledata.cs" />
     <Compile Include="Definitions\LEGION\texturefiledata.cs" />
     <Compile Include="EnumDefinition\EnumType.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProceduralSmith.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProceduralSmith.Designer.cs">
+      <DependentUpon>frmProceduralSmith.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWeaponSmith.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProceduralSmith.resx">
+      <DependentUpon>frmProceduralSmith.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWeaponSmith.resx">
       <DependentUpon>frmWeaponSmith.cs</DependentUpon>
     </EmbeddedResource>
