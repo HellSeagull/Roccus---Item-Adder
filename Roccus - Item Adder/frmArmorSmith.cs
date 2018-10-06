@@ -335,7 +335,7 @@ namespace Roccus___Item_Adder
             else
             {
                 MessageBox.Show("No Active Connection", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            } 
         }
 
         private UInt32 hotfixDataMaxID()

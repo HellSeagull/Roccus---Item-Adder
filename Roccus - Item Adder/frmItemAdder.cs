@@ -128,7 +128,13 @@ namespace Roccus___Item_Adder
 
         private void weaponHotfixBtn_Click(object sender, EventArgs e)
         {
-
+            frmWeaponSmith frm = new frmWeaponSmith();
+            frm.server = server;
+            frm.database = database;
+            frm.username = username;
+            frm.password = password;
+            frm.BringToFront();
+            frm.ShowDialog();
         }
 
         private void proceduralHotfixBtn_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace Roccus___Item_Adder
 {
-    partial class frmArmorSmith
+    partial class frmProceduralSmith
     {
         /// <summary>
         /// Required designer variable.

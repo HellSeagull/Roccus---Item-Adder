@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Roccus___Item_Adder
 {
-    public partial class frmArmorSmith : Form
+    public partial class frmProceduralSmith : Form
     {
-        public frmArmorSmith()
+        public frmProceduralSmith()
         {
             InitializeComponent();
         }
