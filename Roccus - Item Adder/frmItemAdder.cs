@@ -139,7 +139,10 @@ namespace Roccus___Item_Adder
 
         private void proceduralHotfixBtn_Click(object sender, EventArgs e)
         {
-
+            frmConnection frm = new frmConnection();
+            frm.mode = 1;
+            frm.BringToFront();
+            frm.ShowDialog();
         }
     }
 }

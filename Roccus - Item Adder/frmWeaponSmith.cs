@@ -262,12 +262,21 @@ namespace Roccus___Item_Adder
                 {
                     MySqlCommand cmd = new MySqlCommand(@"SELECT MAX(ID) + 1 FROM " + EnumDefinition.EnumType.Tables.item.ToString(), con.TheConnection);
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+                    if (reader.HasRows)
                     {
-                        itemIDTxt.Text = reader.GetUInt32(0).ToString();
+                        while (reader.Read())
+                        {
+                            itemIDTxt.Text = reader.GetUInt32(0).ToString();
+                        }
+                        reader.Close();
+                        con.Disconnect();
                     }
-                    reader.Close();
-                    con.Disconnect();
+                    else
+                    {
+                        MessageBox.Show("No result", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        reader.Close();
+                        con.Disconnect();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -291,12 +300,21 @@ namespace Roccus___Item_Adder
                 {
                     MySqlCommand cmd = new MySqlCommand(@"SELECT MAX(ID) + 1 FROM " + EnumDefinition.EnumType.Tables.item_appearance.ToString(), con.TheConnection);
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+                    if (reader.HasRows)
                     {
-                        itemID2Txt.Text = reader.GetUInt32(0).ToString();
+                        while (reader.Read())
+                        {
+                            itemID2Txt.Text = reader.GetUInt32(0).ToString();
+                        }
+                        reader.Close();
+                        con.Disconnect();
                     }
-                    reader.Close();
-                    con.Disconnect();
+                    else
+                    {
+                        MessageBox.Show("No result", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        reader.Close();
+                        con.Disconnect();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -320,12 +338,20 @@ namespace Roccus___Item_Adder
                 {
                     MySqlCommand cmd = new MySqlCommand(@"SELECT MAX(ID) + 1 FROM " + EnumDefinition.EnumType.Tables.item_modified_appearance.ToString(), con.TheConnection);
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+                    if (reader.HasRows)
                     {
-                        itemID3Txt.Text = reader.GetUInt32(0).ToString();
+                        while (reader.Read())
+                        {
+                            itemID3Txt.Text = reader.GetUInt32(0).ToString();
+                        }
+                        reader.Close();
+                        con.Disconnect();
                     }
-                    reader.Close();
-                    con.Disconnect();
+                    else
+                    {
+                        MessageBox.Show("No result", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        reader.Close();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -345,18 +371,27 @@ namespace Roccus___Item_Adder
             {
                 MySqlCommand cmd = new MySqlCommand(@"SELECT MAX(ID) + 1 FROM " + EnumDefinition.EnumType.Tables.hotfix_data.ToString(), con.TheConnection);
                 MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                if (reader.HasRows)
                 {
-                    value = reader.GetUInt32(0);
+                    while (reader.Read())
+                    {
+                        value = reader.GetUInt32(0);
+                    }
+                    reader.Close();
+                    return value;
                 }
-                reader.Close();
-                return value;
+                else
+                {
+                    MessageBox.Show("No result", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    reader.Close();
+                    return 1;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            return value;
+            return 1;
         }
     }
 }

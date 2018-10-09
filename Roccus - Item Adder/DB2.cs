@@ -39,6 +39,24 @@ namespace Roccus___Item_Adder
             frm.Close();
         }
 
+        public void ListeModelFileDataLastOffi(string filePath, string db2Name)
+        {
+            Form frm = new Form();
+            frm.Text = db2Name;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.BackColor = Color.Yellow;
+            frm.Size = new Size(150, 150);
+            frm.BringToFront();
+            frm.Show();
+            var _modelfiledata = modelfiledata.Values;
+            foreach (var item in _modelfiledata)
+            {
+                if (item.FileDataID == int.Parse(ConfigurationManager.AppSettings["modelFileDataLastOffiId"]))
+                    File.AppendAllText(Path.Combine(filePath, db2Name), item.LodCount + "," + item.FileDataID + "," + item.ModelResourcesID + "\n");
+            }
+            frm.Close();
+        }
+
         public void ListeTextureFileData(string filePath, string db2Name)
         {
             Form frm = new Form();
@@ -53,6 +71,24 @@ namespace Roccus___Item_Adder
             {
                 if (item.FileDataID >= minIDCasc)
                     File.AppendAllText(Path.Combine(filePath, db2Name), item.FileDataID +","+ item.MaterialResourcesID +","+item.UsageType+"\n");
+            }
+            frm.Close();
+        }
+
+        public void ListeTextureFileDataLastOffi(string filePath, string db2Name)
+        {
+            Form frm = new Form();
+            frm.Text = db2Name;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.BackColor = Color.Yellow;
+            frm.Size = new Size(150, 150);
+            frm.BringToFront();
+            frm.Show();
+            var _textureFileData = texturefiledata.Values;
+            foreach (var item in _textureFileData)
+            {
+                if (item.FileDataID == int.Parse(ConfigurationManager.AppSettings["textureFileDataLastOffiId"]))
+                    File.AppendAllText(Path.Combine(filePath, db2Name), item.FileDataID + "," + item.MaterialResourcesID + "," + item.UsageType + "\n");
             }
             frm.Close();
         }

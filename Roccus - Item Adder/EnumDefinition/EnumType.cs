@@ -91,6 +91,18 @@ namespace Roccus___Item_Adder.EnumDefinition
             Leather = 8
         }
 
+        public enum ItemMaterialRes : int
+        {
+            UpperArm = 0,
+            LowerArm = 1,
+            Hands = 2,
+            UpperTorso = 3,
+            LowerTorso = 4,
+            UpperLeg = 5,
+            LowerLeg = 6,
+            Foot = 7
+        }
+
         public EnumType() { }
     }
 }
