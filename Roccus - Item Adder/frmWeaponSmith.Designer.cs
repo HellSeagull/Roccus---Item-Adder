@@ -374,7 +374,7 @@
             this.MaximizeBox = false;
             this.Name = "frmWeaponSmith";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmWeaponSmith";
+            this.Text = "Hotfix Weapon";
             this.Load += new System.EventHandler(this.frmArmorSmith_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();

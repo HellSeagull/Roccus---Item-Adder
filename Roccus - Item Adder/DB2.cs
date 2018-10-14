@@ -99,39 +99,74 @@ namespace Roccus___Item_Adder
             frm.Text = db2Name;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.BackColor = Color.Yellow;
-            frm.Size = new Size(150,150);
+            frm.Size = new Size(150, 150);
             frm.BringToFront();
             frm.Show();
             var _itemDisplayInfo = itemdisplayinfo.Values;
             var _modelFileData = modelfiledata.Values;
             foreach (var item in _itemDisplayInfo)
             {
-                foreach(var data in _modelFileData)
-                {
-                    if(data.FileDataID >= minIDCasc)
-                    {
-                        if(data.ModelResourcesID == item.ModelResourcesID[0] || data.ModelResourcesID == item.ModelResourcesID[1]){
-                            File.AppendAllText(Path.Combine(filePath, db2Name), item.ID +","+item.ModelResourcesID[0]+","+item.ModelMaterialResourcesID[0]+"\n");
-                        }
-                        else if(data.ModelResourcesID != item.ModelResourcesID[0] && item.ID > 168092 || data.ModelResourcesID != item.ModelResourcesID[1] && item.ID > 168092)
-                        {
-                            File.AppendAllText(Path.Combine(filePath, db2Name), item.ID+","+item.ModelResourcesID[0]+","+item.ModelMaterialResourcesID[0]+"\n");
-                        }
-                    }
-                }            
+                File.AppendAllText(Path.Combine(filePath, db2Name), item.ID + "," + item.ModelResourcesID[0] + "," + item.ModelMaterialResourcesID[0] + "\n");
             }
             frm.Close();
         }
 
-        public void ListItemDisplayInfoMaterialRes(string filePath, string db2Name)
+        public void ListeItemDisplayInfoLastOffi(string filePath, string db2Name)
         {
-            var _modelfiledata = modelfiledata.Values;
-            foreach (var item in _modelfiledata)
+            Form frm = new Form();
+            frm.Text = db2Name;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.BackColor = Color.Yellow;
+            frm.Size = new Size(150, 150);
+            frm.BringToFront();
+            frm.Show();
+            var _itemDisplayInfo = itemdisplayinfo.Values;
+            var _modelFileData = modelfiledata.Values;
+            foreach (var item in _itemDisplayInfo)
             {
-                if (item.FileDataID >= minIDCasc)
-                    File.AppendAllText(Path.Combine(filePath, db2Name), "\"" + item.LodCount + "\",\"" + item.FileDataID + "\",\"" + item.ModelResourcesID + "\"\n");
+                if (item.ID == int.Parse(ConfigurationManager.AppSettings["itemDisplayInfoLastOffiId"]))
+                {
+                    File.AppendAllText(Path.Combine(filePath, db2Name), item.ID + "," + item.ModelResourcesID[0] + "," + item.ModelMaterialResourcesID[0] + "\n");
+                }
             }
-            MessageBox.Show("Done");
+            frm.Close();
+        }
+
+        public void ListeItemDisplayInfoMaterialRes(string filePath, string db2Name)
+        {
+            Form frm = new Form();
+            frm.Text = db2Name;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.BackColor = Color.Yellow;
+            frm.Size = new Size(150, 150);
+            frm.BringToFront();
+            frm.Show();
+            var _itemDisplayInfomaterialres = itemdisplayinfomaterialres.Values;
+            foreach (var material in _itemDisplayInfomaterialres)
+            {
+                File.AppendAllText(Path.Combine(filePath, db2Name), material.ID + "," + material.MaterialResourcesID + "," + material.ComponentSection + "\n");
+            }
+            frm.Close();
+        }
+
+        public void ListeItemDisplayInfoMaterialResLastOffi(string filePath, string db2Name)
+        {
+            Form frm = new Form();
+            frm.Text = db2Name;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.BackColor = Color.Yellow;
+            frm.Size = new Size(150, 150);
+            frm.BringToFront();
+            frm.Show();
+            var _itemDisplayInfomaterialres = itemdisplayinfomaterialres.Values;
+            foreach (var material in _itemDisplayInfomaterialres)
+            {
+                if (material.ID == int.Parse(ConfigurationManager.AppSettings["itemMaterialResLastOffiId"]))
+                {
+                    File.AppendAllText(Path.Combine(filePath, db2Name), material.ID + "," + material.MaterialResourcesID + "," + material.ComponentSection + "\n");
+                }
+            }
+            frm.Close();
         }
 
     }

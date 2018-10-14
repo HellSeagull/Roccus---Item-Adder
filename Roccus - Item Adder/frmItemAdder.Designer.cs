@@ -82,7 +82,7 @@
             // 
             this.groupBox2.Controls.Add(this.db2Box);
             this.groupBox2.Controls.Add(this.DB2toCSVBtn);
-            this.groupBox2.Location = new System.Drawing.Point(301, 69);
+            this.groupBox2.Location = new System.Drawing.Point(592, 69);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(249, 517);
             this.groupBox2.TabIndex = 1;
@@ -114,7 +114,7 @@
             this.groupBox3.Controls.Add(this.proceduralHotfixBtn);
             this.groupBox3.Controls.Add(this.weaponHotfixBtn);
             this.groupBox3.Controls.Add(this.armorHotfixBtn);
-            this.groupBox3.Location = new System.Drawing.Point(587, 69);
+            this.groupBox3.Location = new System.Drawing.Point(295, 69);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(267, 517);
             this.groupBox3.TabIndex = 1;
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 598);
+            this.ClientSize = new System.Drawing.Size(853, 598);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -164,7 +164,7 @@
             this.MaximizeBox = false;
             this.Name = "frmItemAdder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Roccus - Custom Item Adder";
+            this.Text = "Interface";
             this.Load += new System.EventHandler(this.frmItemAdder_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

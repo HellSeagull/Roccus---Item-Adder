@@ -58,7 +58,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmSQLFilter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSQLFilter";
+            this.Text = "\"LIKE\" Filter SQL";
             this.Load += new System.EventHandler(this.frmSQLFilter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

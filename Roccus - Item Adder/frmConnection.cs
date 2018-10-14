@@ -34,8 +34,9 @@ namespace Roccus___Item_Adder
             if(mode == 1)
             {
                 databaseTxt.Enabled = true;
+                databaseTxt.Select();
+                databaseTxt.Focus();
             }
-            ConnectionBtn.Focus();
         }
 
         private void ConnectionBtn_Click(object sender, EventArgs e)
@@ -63,7 +64,7 @@ namespace Roccus___Item_Adder
             {
                 await Task.Delay(2000);
                 this.Hide();
-                frmProceduralSmith frm = new frmProceduralSmith();
+                frmDB2Item frm = new frmDB2Item();
                 frm.server = serverTxt.Text;
                 frm.database = databaseTxt.Text;
                 frm.username = usernameTxt.Text;
@@ -82,6 +83,23 @@ namespace Roccus___Item_Adder
                 frm.password = passwordTxt.Text;
                 frm.ShowDialog();
                 this.Close();
+            }
+        }
+
+        private void ConnectionBtn_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                Connection();
+            }
+        }
+
+        private void databaseTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ConnectionBtn_Click(sender, e);
             }
         }
     }

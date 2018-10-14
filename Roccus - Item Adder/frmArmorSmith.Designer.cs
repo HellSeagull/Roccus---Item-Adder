@@ -379,7 +379,7 @@
             this.MaximizeBox = false;
             this.Name = "frmArmorSmith";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmArmorSmith";
+            this.Text = "Hotfix Armor";
             this.Load += new System.EventHandler(this.frmArmorSmith_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();

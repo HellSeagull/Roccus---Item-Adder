@@ -29,6 +29,9 @@ namespace Roccus___Item_Adder
         private void frmSQLFilter_Load(object sender, EventArgs e)
         {
 
+            this.Activate();
+            this.Select();
+            textBox1.Focus();
         }
     }
 }

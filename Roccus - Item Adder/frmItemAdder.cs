@@ -85,7 +85,7 @@ namespace Roccus___Item_Adder
                     db2.ListeItemDisplayInfo(db2CustomPath, getCBoxDB2Text() + "_custom.csv");
                     break;
                 case "itemdisplayinfomaterialres":
-                    db2.ListItemDisplayInfoMaterialRes(db2CustomPath, getCBoxDB2Text() + "_custom.csv");
+                    db2.ListeItemDisplayInfoMaterialRes(db2CustomPath, getCBoxDB2Text() + "_custom.csv");
                     break;
                 case "modelfiledata":
                     db2.ListeModelFileData(db2CustomPath, getCBoxDB2Text() + "_custom.csv");

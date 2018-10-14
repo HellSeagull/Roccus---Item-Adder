@@ -49,6 +49,7 @@
             this.ConnectionBtn.Text = "Connection";
             this.ConnectionBtn.UseVisualStyleBackColor = true;
             this.ConnectionBtn.Click += new System.EventHandler(this.ConnectionBtn_Click);
+            this.ConnectionBtn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ConnectionBtn_KeyDown);
             // 
             // lblWaiting
             // 
@@ -73,6 +74,7 @@
             this.databaseTxt.Name = "databaseTxt";
             this.databaseTxt.Size = new System.Drawing.Size(254, 20);
             this.databaseTxt.TabIndex = 3;
+            this.databaseTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.databaseTxt_KeyDown);
             // 
             // usernameTxt
             // 
@@ -143,7 +145,7 @@
             this.MaximizeBox = false;
             this.Name = "frmConnection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConnection";
+            this.Text = "Connection to Database";
             this.Load += new System.EventHandler(this.frmConnection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
