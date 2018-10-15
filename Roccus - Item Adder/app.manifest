@@ -18,10 +18,10 @@
         -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
-        <ApplicationRequestMinimum>
+        <!--<ApplicationRequestMinimum>
             <defaultAssemblyRequest permissionReference="FullTrust" />
             <PermissionSet version="1" ID="FullTrust" Unrestricted="true" />
-        </ApplicationRequestMinimum>
+        </ApplicationRequestMinimum>-->
     </security>
   </trustInfo>
 

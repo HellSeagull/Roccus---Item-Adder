@@ -473,6 +473,7 @@ namespace Roccus___Item_Adder
             var ListPant = sectionComponentPant.ToList();
             var ListGlove = sectionComponentGlove.ToList();
             var ListBoot = sectionComponentBoot.ToList();
+            int counter = -1;
 
             for (int i = 0; i < displayInfoID.Count; i++)
             {
@@ -539,7 +540,8 @@ namespace Roccus___Item_Adder
                         }
                     }
                 }
-                i += 4;
+
+                i += 3;
                 if (i > displayInfoID.Count)
                     break;
             }
