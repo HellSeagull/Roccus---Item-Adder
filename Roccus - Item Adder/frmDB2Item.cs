@@ -479,7 +479,7 @@ namespace Roccus___Item_Adder
             {
                 foreach (KeyValuePair<string, int> key in collectionsTextures)
                 {
-                    if(key.Value.ToString() == displayInfoID[i].Split(',')[13])
+                    if (key.Value.ToString() == displayInfoID[i].Split(',')[13])
                     {
                         string materialRef = key.Key;
 

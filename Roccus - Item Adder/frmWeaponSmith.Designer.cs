@@ -177,6 +177,7 @@
             this.itemModAppMaxIDBtn.TabIndex = 51;
             this.itemModAppMaxIDBtn.Text = "max ID";
             this.itemModAppMaxIDBtn.UseVisualStyleBackColor = true;
+            this.itemModAppMaxIDBtn.Click += new System.EventHandler(this.itemModAppMaxIDBtn_Click);
             // 
             // itemID3Txt
             // 
@@ -203,6 +204,7 @@
             this.itemAppMaxIDBtn.TabIndex = 48;
             this.itemAppMaxIDBtn.Text = "max ID";
             this.itemAppMaxIDBtn.UseVisualStyleBackColor = true;
+            this.itemAppMaxIDBtn.Click += new System.EventHandler(this.itemAppMaxIDBtn_Click);
             // 
             // objectSlotBox
             // 
@@ -245,6 +247,7 @@
             this.maxIDBtn.TabIndex = 43;
             this.maxIDBtn.Text = "max ID";
             this.maxIDBtn.UseVisualStyleBackColor = true;
+            this.maxIDBtn.Click += new System.EventHandler(this.maxIDBtn_Click);
             // 
             // inventoryTypeBox
             // 
@@ -297,6 +300,7 @@
             this.hotfixBtn.TabIndex = 37;
             this.hotfixBtn.Text = "Hotfix";
             this.hotfixBtn.UseVisualStyleBackColor = true;
+            this.hotfixBtn.Click += new System.EventHandler(this.hotfixBtn_Click);
             // 
             // previewBtn
             // 
@@ -306,6 +310,7 @@
             this.previewBtn.TabIndex = 36;
             this.previewBtn.Text = "Preview Armor";
             this.previewBtn.UseVisualStyleBackColor = true;
+            this.previewBtn.Click += new System.EventHandler(this.previewBtn_Click);
             // 
             // groupBox1
             // 
@@ -375,7 +380,7 @@
             this.Name = "frmWeaponSmith";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotfix Weapon";
-            this.Load += new System.EventHandler(this.frmArmorSmith_Load);
+            this.Load += new System.EventHandler(this.frmWeaponSmith_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.previewBox)).EndInit();

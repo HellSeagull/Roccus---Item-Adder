@@ -47,7 +47,7 @@ namespace Roccus___Item_Adder
 
         }
 
-        private void frmArmorSmith_Load(object sender, EventArgs e)
+        private void frmWeaponSmith_Load(object sender, EventArgs e)
         {
             con = new DBInstance(server, database, username, password);
             previewBox.Visible = false;
